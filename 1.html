@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Responsive Dinamis</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LogoBrand</a>
+            
+            <!-- Tombol Hamburger (Hanya muncul di Mobile) -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menu Navigasi -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#beranda" class="nav-item">Beranda</a></li>
+                <li><a href="#departemen" class="nav-item">Departemen</a></li>
+                <li><a href="#kontak" class="nav-item">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Tengah & Proporsional) -->
+    <header id="beranda" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Solusi Digital Masa Depan</h1>
+            <p class="hero-subtitle">Kami membangun ekosistem digital yang responsif, dinamis, dan mudah digunakan di semua perangkat Anda.</p>
+            <a href="#departemen" class="btn btn-primary">Lihat Layanan</a>
+        </div>
+    </header>
+
+    <!-- BAGIAN DEPARTEMEN / CARD (Grid Auto-fit) -->
+    <main>
+        <section id="departemen" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Departemen Kami</h2>
+                    <p>Pilih departemen untuk mengetahui lebih detail mengenai layanan kami.</p>
+                </div>
+                
+                <!-- Grid Card Otomatis -->
+                <div class="department-grid">
+                    
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="IT Department" class="card-img">
+                        <div class="card-content">
+                            <h3>IT & Development</h3>
+                            <p>Fokus pada pengembangan perangkat lunak, keamanan siber, dan infrastruktur cloud.</p>
+                            <button class="btn btn-outline">Detail Info</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="HR Department" class="card-img">
+                        <div class="card-content">
+                            <h3>Human Resources</h3>
+                            <p>Mengelola rekrutmen, kesejahteraan karyawan, pelatihan, dan pengembangan talenta.</p>
+                            <button class="btn btn-outline">Detail Info</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Marketing Department" class="card-img">
+                        <div class="card-content">
+                            <h3>Marketing</h3>
+                            <p>Merancang strategi pemasaran, manajemen media sosial, dan kampanye branding.</p>
+                            <button class="btn btn-outline">Detail Info</button>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Finance Department" class="card-img">
+                        <div class="card-content">
+                            <h3>Finance & Audit</h3>
+                            <p>Memastikan alur kas sehat, manajemen anggaran, dan laporan keuangan perusahaan.</p>
+                            <button class="btn btn-outline">Detail Info</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="footer">
+        <p>&copy; 2026 LogoBrand. Didesain untuk semua ukuran layar.</p>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

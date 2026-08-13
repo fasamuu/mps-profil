@@ -1,0 +1,304 @@
+/* =========================================
+   1. RESET & BASE (Menghindari horizontal scroll)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Animasi scroll mulus saat klik menu */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah horizontal scroll di mobile */
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Gambar otomatis responsive */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Container utama agar konten tidak terlalu melebar di desktop raksasa */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   2. BUTTONS (Touch friendly, min-height 44px)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    min-height: 44px; /* Standar tap area mobile */
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+.btn-outline:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* =========================================
+   3. NAVBAR
+   ========================================= */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+/* Tombol Hamburger styling (disembunyikan di desktop) */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    min-height: 44px;
+    padding: 0.5rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* =========================================
+   4. HERO SECTION (Proporsional dengan vh & vw)
+   ========================================= */
+.hero-section {
+    margin-top: 60px; /* Offset dari navbar yang fixed */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 5%;
+    /* Menggunakan gradient sebagai pengganti gambar hero agar load cepat */
+    background: linear-gradient(135deg, #0056b3 0%, #002244 100%);
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* Clamp membuat font membesar/mengecil otomatis tanpa media query */
+.hero-title {
+    font-size: clamp(2rem, 5vw, 4rem); 
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* =========================================
+   5. DEPARTMENT SECTION (CSS Grid Auto-fit)
+   ========================================= */
+.section-padding {
+    padding: clamp(3rem, 6vh, 6rem) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+/* Rahasia grid responsive tanpa pusing media query */
+.department-grid {
+    display: grid;
+    /* Lebar minimal tiap card 300px, kalau sisa ruang lebar akan dibagi rata (1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Menjaga proporsi gambar */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Mendorong tombol ke paling bawah */
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* =========================================
+   7. MEDIA QUERIES (Sesuai breakpoint Anda)
+   ========================================= */
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .hamburger {
+        display: block; /* Munculkan hamburger di mobile */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%; /* Sembunyikan menu di kiri layar */
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        left: 0; /* Tarik menu ke dalam layar saat class active ditambahkan */
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1.5rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Animasi Hamburger menjadi 'X' */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .department-grid {
+        gap: 1.5rem;
+    }
+}
+/* Desktop (> 1024px) sudah di-cover oleh base rules (Mobile/Desktop-first blend) */
