@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komisi Litbang</title>
+    
+    <!-- CSS Utama & CSS Spesifik Departemen -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/department.css">
+</head>
+<body>
+
+    <!-- ELEMEN ANIMASI MASUK (Letakkan paling atas setelah <body>) -->
+    <div id="page-in-overlay" class="page-in-overlay"></div>
+
+    <!-- NAVBAR (Konsisten dengan halaman utama) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <!-- <span class="logo-icon">💠</span> -->
+                <a href="#" class="logo">
+                    <img src="../assets/MPS.png" alt="MPS" class="logo-img">
+                </a>
+                <span class="logo-text">Majelis Perwakilan Siswa.</span>
+            </a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Sidebar / Menu Mobile & Desktop -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="../1.html">Home</a></li>
+                    <!-- <li><a href="../index.html#tentang">Tentang Organisasi</a></li> -->
+                    <li class="dropdown">
+                        <button class="dropdown-btn">Semua Departemen ▾</button>
+                        <ul class="dropdown-content">
+                            <!-- Indikator aktif pada departemen yang sedang dibuka -->
+                            <li><a href="bph.html">BPH</a></li>
+                            <li><a href="pengawas.html">Komisi Pengawas</a></li>
+                            <li><a href="litbang.html" class="active">Komisi Litbang</a></li>
+                            <li><a href="aspis.html">Komisi Aspis</a></li>
+                            <li><a href="pubdok.html">Komisi Pubdok</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="../index.html#struktur">Struktur Organisasi</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION DEPARTEMEN -->
+    <header class="dept-hero fade-in">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <span class="badge">LITBANG</span>
+                <h1 class="hero-title">Komisi Penelitian dan Pengembangan</h1>
+                <!-- <p class="hero-tagline">Literasi pengembangan</p> -->
+                <p class="hero-desc">Komisi Penelitian dan Pengembangan MPS berperan sebagai peneliti kinerja organisasi kesiswaan dan pengkoordinasi usaha-usaha pengembangan MPS. </p>
+            </div>
+            <div class="hero-illustration">
+                <!-- Placeholder untuk ilustrasi -->
+                <div class="icon-large"><img src="../assets/litbang/logo1.png"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TENTANG KOMISI -->
+        <section class="dept-about section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tentang Komisi</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🎯</div> -->
+                        <h3>Fokus Kerja</h3>
+                        <p>Penelitian, evaluasi kinerja, dan pengembangan sistem kerja organisasi kesiswaan.Penelitian, evaluasi kinerja, dan pengembangan sistem kerja organisasi kesiswaan.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">⚙️</div> -->
+                        <h3>Tugas & Fungsi</h3>
+                        <p>Menyusun SOP, melakukan evaluasi kinerja organisasi, mengolah hasil penelitian, serta mengoordinasikan upaya pengembangan MPS dan organisasi kesiswaan.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🚀</div> -->
+                        <h3>Peran</h3>
+                        <p>Menjadi pusat riset dan evaluasi MPS untuk memastikan organisasi kesiswaan bekerja secara terarah, efektif, dan terus berkembang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM KERJA -->
+        <section class="dept-programs section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Program Kerja</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="program-grid">
+                    <!-- Card 1 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">SOP OS</span>
+                        </div>
+                        <h3>Standar Operasional Prosedur OS</h3>
+                        <!-- <p class="program-short-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, alias!</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> (Standar Operasional Prosedur) adalah program yang dirancang untuk menjadi panduan standar alir kerja yang terstruktur agar kegiatan operasional OS (Organisasi Siswa) dapat berjalan dengan lancar.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                           <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/litbang/sop.jpg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <!-- <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pubdok/lanyard2.png" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                         -->
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">ELITE - EKOS</span>
+                        </div>
+                        <h3>Evaluasi Kinerja OS</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> Program ini dirancang untuk membantu pengurus organisasi di SMAIT Al Uswah dalam mengevaluasi kinerja secara objektif seluruh organisasi kesiswaan (ELITE di setengah periode awal dan EKOS di setengah periode akhir).
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/litbang/ekos3.png" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/litbang/ekos2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+
+                    <!-- Card 3 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">FOR SEKRE</span>
+                        </div>
+                        <h3>Forum Sekretaris</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> Forum yang berfungsi untuk memberikan pelatihan kepada para sekretaris OS mengenai tugas-tugas serta tanggung jawab kesekretariatan.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/litbang/forsekre1.jpg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/litbang/forsekre2.jpeg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 3 -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/litbang/forsekre3.jpeg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DOKUMENTASI / GALLERY -->
+        <!-- <section class="dept-gallery section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dokumentasi Kegiatan</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0" data-caption="Rapat Koordinasi Komisi Litbang - Awal Periode">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 1">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="1" data-caption="Pelaksanaan Survei Offline di Kampus/Kantor">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 2">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="2" data-caption="Presentasi Hasil Analisis Data Triwulan I">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 3">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="3" data-caption="Diskusi Terpumpun (FGD) Evaluasi Proker">
+                        <img src="https://images.unsplash.com/photo-1553877522-43ce6fc7928d?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 4">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <!-- NAVIGASI BAWAH -->
+   <!-- NAVIGASI BAWAH -->
+    <nav class="bottom-nav fade-in">
+        <div class="container flex-between">
+            <a href="../1.html" class="btn-nav btn-home">Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <!-- LIGHTBOX MODAL (Tersembunyi secara default) -->
+    <div id="lightbox" class="lightbox-modal">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <button id="btn-back-top" aria-label="Kembali ke atas">↑</button>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/department.js"></script>
+</body>
+</html>5

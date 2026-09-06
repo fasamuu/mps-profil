@@ -1,0 +1,385 @@
+/* css/department.css */
+
+/* === HERO DEPARTEMEN === */
+.dept-hero {
+    margin-top: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color) 50%, white 150%);
+    color: white;
+    padding: clamp(3rem, 10vh, 6rem) 0;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.hero-text { flex: 1; }
+
+.badge {
+    display: inline-block;
+    background: var(--bccent-color); 
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    color: var(--shadow);
+    max-width: 600px;
+}
+
+.hero-illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-large {
+    font-size: 150px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* === TENTANG KOMISI === */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about-card:hover { transform: translateY(-5px); }
+
+.about-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* === PROGRAM KERJA === */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.program-card {
+    background: var(--bg-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--bccent-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.program-status {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.status-active { background: var(--bccent-color); color: var(--bg-light) }
+.status-planning { background:  var(--accent-color); color: var(--bccent-color)}
+.status-done { background:  var(--bccent-color); color: var(--accent-color);}
+
+.program-icon { font-size: 2rem; }
+
+.program-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.program-short-desc {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.program-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background: var(--bg-light);
+    padding: 0 1rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    opacity: 0;
+}
+.program-detail.open {
+    padding: 1rem;
+    max-height: 800px; /* Diperbesar agar muat slider foto */
+    opacity: 1;
+    margin-bottom: 1.5rem;
+    overflow-y: auto;
+}
+
+.btn-expand {
+    background: none;
+    border: none;
+    color: var(--bccent-color);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* === SLIDER DOKUMENTASI DI DALAM CARD === */
+.program-gallery {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.slider-track {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.gallery-slide {
+    display: none; 
+    width: 100%;
+    animation: fadeInSlide 0.4s ease-in-out;
+}
+
+.gallery-slide.active {
+    display: block; 
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* SETTING BENTUK KOTAK GAMBAR (1:1) */
+.gallery-slide .gallery-item {
+    position: relative;
+    border-radius: 8px; 
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1 / 1 !important; /* MEMAKSA BENTUK KOTAK 1:1 */
+    width: 100%;
+}
+
+.gallery-slide .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important; /* MEMAKSA GAMBAR MENGISI KOTAK TANPA GEPENG */
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* OVERLAY KETIKA DI-HOVER */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* Desain Tombol Geser Kiri Kanan */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: var(--bccent-color, #d4af37);
+}
+
+.prev-btn { left: 8px; }
+.next-btn { right: 8px; }
+
+
+/* === BOTTOM NAVIGATION === */
+.bottom-nav {
+    background: var(--bccent-color); 
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-nav {
+    color: var(--bccent-color); 
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s ease; 
+    font-weight: 500;
+    display: block; 
+    width: fit-content; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.btn-nav:hover { background: var(--bccent-color); }
+.btn-nav.disabled { opacity: 0.5; pointer-events: none; }
+.btn-home { background: var(--bg-light); } 
+.btn-home:hover { background: var(--bccent-color); color: white; } 
+
+
+/* === LIGHTBOX  === */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+.lightbox-modal.active { display: flex; }
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80vh;
+    text-align: center;
+}
+
+#lightbox-img {
+    max-height: 80vh;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    color: white; /* Diubah jadi white agar terlihat di atas background hitam */
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.lightbox-close, .lightbox-prev, .lightbox-next {
+    position: absolute; 
+    background: none;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { color: var(--bccent-color); }
+
+.lightbox-close { top: 20px; right: 30px; }
+.lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+
+/* === RESPONSIVE SPESIFIK === */
+@media (max-width: 767px) {
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-desc { margin: 0 auto; }
+    
+    .flex-between { flex-direction: column; width: 100%; }
+    .btn-nav { width: 100%; justify-content: center; }
+    
+    .hide-mobile { display: none; }
+    
+    .lightbox-prev { left: 10px; font-size: 2rem; }
+    .lightbox-next { right: 10px; font-size: 2rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-wrapper { gap: 1rem; }
+}

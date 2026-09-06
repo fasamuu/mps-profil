@@ -1,0 +1,299 @@
+/* ==================================================
+   CSS WELCOME PAGE - KARAKTER ORGANIK & ELEGAN
+   ================================================== */
+
+:root {
+    /* Palet Warna (Bisa diubah sesuai identitas organisasi) */
+    --bg-color: #0d0f12;         /* Latar belakang gelap natural */
+    --text-primary: #f3f4f6;     /* Warna teks utama (Off-white) */
+    --text-secondary: #9ca3af;   /* Warna teks sekunder */
+    --accent-color: #d4af37;     /* Aksen warna (Contoh: Emas Redup) */
+    
+    /* Tipografi */
+    --font-heading: 'Lora', serif;     
+    --font-body: 'Manrope', sans-serif; 
+    
+    /* Utility */
+    --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset Dasar */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    font-family: var(--font-body);
+    height: 95vh;
+    overflow: hidden; /* Mencegah scroll */
+    position: relative;
+    /* Pola Titik Subtle (Bukan gradient generik) */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* --- BACKGROUND PARALLAX --- */
+.bg-canvas {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    transition: transform 0.2s ease-out;
+}
+
+.shape-1 {
+    width: 40vw; height: 40vw;
+    background-color: var(--accent-color);
+    top: -10%; left: -10%;
+}
+
+.shape-2 {
+    width: 50vw; height: 50vw;
+    background-color: var(--accent-color); /* Warna sekunder yang subtle */
+    bottom: -10%; right: -10%;
+}
+
+/* --- LAYOUT UTAMA --- */
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    gap: 4rem;
+}
+
+.visual-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.content-section {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- LOGO & VISUAL --- */
+.logo-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease-out;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent-color);
+    border-radius: 4px; /* Sedikit kotak, hindari rounded berlebihan */
+}
+
+.logo-img {
+    height: 500px;      /* Atur tinggi logo sesuai kebutuhan (misal 40px - 60px) */
+    width: auto;       /* Lebar menyesuaikan otomatis agar tidak gepeng */
+    display: block;
+}
+/* --- TIPOGRAFI --- */
+.greeting {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.org-name {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--bg-color);
+}
+
+.org-desc {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+/* --- TOMBOL MAGNETIC --- */
+.magnetic-btn {
+    background: var(--accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--bg-color);
+    padding: 1.2rem 2.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    border-radius: 2px;
+}
+
+.magnetic-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    height: 100%;
+    background: var(--text-primary);
+    transition: transform 0.4s var(--transition-smooth);
+    z-index: 0;
+}
+
+.magnetic-btn:hover::before {
+    transform: translateY(-100%);
+}
+
+.magnetic-btn:hover {
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+}
+
+.btn-text, .btn-icon {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.magnetic-btn:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* --- ANIMASI REVEAL --- */
+.reveal-mask {
+    overflow: hidden;
+    padding-bottom: 5px; /* Mencegah font terpotong di bawah */
+}
+
+.reveal-element {
+    transform: translateY(110%);
+    opacity: 0;
+    transition: transform 1.2s var(--transition-smooth), opacity 1.2s ease;
+}
+
+/* Class 'is-loaded' ditambahkan oleh JS saat halaman dimuat */
+body.is-loaded .reveal-element {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.5s; }
+.delay-4 { transition-delay: 0.7s; }
+.delay-5 { transition-delay: 0.9s; }
+
+/* --- EASTER EGG --- */
+.easter-egg {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.easter-egg.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spin-animation {
+    animation: spin 0.8s var(--transition-smooth);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(0.9); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* --- OVERLAY TRANSISI KELUAR --- */
+.page-transition {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--accent-color); /* Animasi flash warna terang */
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.8s var(--transition-smooth);
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE / MEDIA QUERIES --- */
+@media (max-width: 900px) {
+    .welcome-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .visual-section {
+        flex: none;
+        align-items: center;
+    }
+    
+    .org-desc {
+        margin: 0 auto 2.5rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow-y: auto; /* Mengizinkan scroll sedikit di mobile jika konten padat */
+    }
+    .org-name { font-size: 2.5rem; }
+    .logo-placeholder { width: 60px; height: 60px; font-size: 1.5rem; }
+}
+
+/* --- ACCESSIBILITY  --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .reveal-element {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .bg-shape { display: none; } /* Matikan parallax bg */
+}

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komisi Pengawas</title>
+    
+    <!-- CSS Utama & CSS Spesifik Departemen -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/department.css">
+</head>
+<body>
+
+    <!-- ELEMEN ANIMASI MASUK (Letakkan paling atas setelah <body>) -->
+    <div id="page-in-overlay" class="page-in-overlay"></div>
+
+    <!-- NAVBAR (Konsisten dengan halaman utama) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <!-- <span class="logo-icon">💠</span> -->
+                <a href="#" class="logo">
+                    <img src="../assets/MPS.png" alt="MPS" class="logo-img">
+                </a>
+                <span class="logo-text">Majelis Perwakilan Siswa.</span>
+            </a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Sidebar / Menu Mobile & Desktop -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="../1.html">Home</a></li>
+                    <!-- <li><a href="../index.html#tentang">Tentang Organisasi</a></li> -->
+                    <li class="dropdown">
+                        <button class="dropdown-btn">Semua Departemen ▾</button>
+                        <ul class="dropdown-content">
+                            <!-- Indikator aktif pada departemen yang sedang dibuka -->
+                            <li><a href="bph.html" >BPH</a></li>
+                            <li><a href="pengawas.html" class="active">Komisi Pengawas</a></li>
+                            <li><a href="litbang.html">Komisi Litbang</a></li>
+                            <li><a href="aspis.html">Komisi Aspis</a></li>
+                            <li><a href="pubdok.html">Komisi Pubdok</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="../index.html#struktur">Struktur Organisasi</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION DEPARTEMEN -->
+    <header class="dept-hero fade-in">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <span class="badge">KPO</span>
+                <h1 class="hero-title">Komisi Pengawas OS</h1>
+                <!-- <p class="hero-tagline">Ngawasi kabeh OS ben gacor</p> -->
+                <p class="hero-desc">Komisi Kepengawasan Organisasi  bertugas untuk mendampingi kegiatan organisasi eksekutif secara langsung. Meliputi mengawasi, mengevaluasi, serta menjadi jembatan penghubung bagi organisasi terkait dengan pihak kesiswaan. </p>
+            </div>
+            <div class="hero-illustration">
+                <!-- Placeholder untuk ilustrasi -->
+                <div class="icon-large"><img src="../assets/pengawas/logo1.png"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TENTANG KOMISI -->
+        <section class="dept-about section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tentang Komisi</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🎯</div> -->
+                        <h3>Fokus Kerja</h3>
+                        <p>Pengawasan, pendampingan, dan evaluasi kinerja organisasi eksekutif.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">⚙️</div> -->
+                        <h3>Tugas & Fungsi</h3>
+                        <p>Mendampingi kegiatan organisasi, mengawasi pelaksanaan program kerja, mengevaluasi kinerja, mengantisipasi kendala, serta menjadi penghubung antara organisasi dengan pihak kesiswaan.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🚀</div> -->
+                        <h3>Peran</h3>
+                        <p>Menjadi mitra pengawas organisasi dalam memastikan setiap kegiatan berjalan sesuai aturan, terarah, dan dapat dipertanggungjawabkan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM KERJA -->
+        <section class="dept-programs section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Program Kerja</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="program-grid">
+                    <!-- Card 1 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">SK</span>
+                        </div>
+                        <h3>Sekolah Kepengawasan </h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>Pelatihan dasar mengenai kepemimpinan, komunikasi organisasi, manajemen kegiatan, dan khususnya komponen kepengawasan (pengembangan skill menganalisis, mengantisipasi kendala, menegakkan aturan berorganisasi, serta mengevaluasi dan memberikan saran).
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pengawas/sekolahpengawas1.JPG" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/sekolahpengawas2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 3 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/sekolahpengawas3.JPG" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">Kepengawasan</span>
+                        </div>
+                        <h3>Kepengawasan Organisasi</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>Pengawasan terhadap seluruh kegiatan yang dilaksanakan oleh organisasi-organisasi di sekolah seperti OSIS, Ambalan, dan SKI (baik pedampingan dalam departemen ataupun event).
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pengawas/kepengawasan1.jpg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/kepengawasan2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+ 
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">COMTA</span>
+                        </div>
+                        <h3>Completing Task</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>diskusi terbuka dan pembuatan kesepakatan/pertanggungjawaban semua program kerja yang mempertemukan pengurus inti organisasi dengan tim pengawas.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pengawas/comta1.JPG" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/comta2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+ 
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">RADENG</span>
+                        </div>
+                        <h3>Rapat Dengar</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>Kegiatan laporan dan evaluasi selama masa persiapan suatu event sebelum hari H. Bertujuan memastikan ada/tidaknya kekurangan yang perlu diantisipasi demi kelancaran kegiatan nantinya.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pengawas/radeng.jpg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <!-- <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/comta2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+  -->
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                        <!-- Card 5 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">REP</span>
+                        </div>
+                        <h3>Rapat Evaluasi Pengawas</h3>
+                        <!-- <p class="program-short-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ab.</p> -->
+
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>Rapat evaluasi internal yang membahas pencapaian dan kendala masing-masing pengawas selama menjalankan tugas. Selain menjadi ajang perbaikan diri pengawas dan penyusunan rencana pengembangan departemen yang diawasi, REP berfungsi sebagai penguat kebersamaan antaranggota KPO.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                            <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pengawas/rep1.jpg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pengawas/rep2.jpg" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+ 
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DOKUMENTASI / GALLERY -->
+        <!-- <section class="dept-gallery section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dokumentasi Kegiatan</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-index="0" data-caption="Rapat Koordinasi Komisi Litbang - Awal Periode">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 1">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="1" data-caption="Pelaksanaan Survei Offline di Kampus/Kantor">
+                        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 2">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="2" data-caption="Presentasi Hasil Analisis Data Triwulan I">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 3">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                    <div class="gallery-item" data-index="3" data-caption="Diskusi Terpumpun (FGD) Evaluasi Proker">
+                        <img src="https://images.unsplash.com/photo-1553877522-43ce6fc7928d?auto=format&fit=crop&w=600&q=80" alt="Kegiatan 4">
+                        <div class="gallery-overlay"><span>🔍 Perbesar</span></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <!-- NAVIGASI BAWAH -->
+    <!-- NAVIGASI BAWAH -->
+    <nav class="bottom-nav fade-in">
+        <div class="container flex-between">
+            <a href="../1.html" class="btn-nav btn-home">Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <!-- LIGHTBOX MODAL (Tersembunyi secara default) -->
+    <div id="lightbox" class="lightbox-modal">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <button id="btn-back-top" aria-label="Kembali ke atas">↑</button>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/department.js"></script>
+</body>
+</html>

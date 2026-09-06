@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komisi pubdok</title>
+    
+    <!-- CSS Utama & CSS Spesifik Departemen -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/department.css">
+</head>
+<body>
+
+    <!-- ELEMEN ANIMASI MASUK (Letakkan paling atas setelah <body>) -->
+    <div id="page-in-overlay" class="page-in-overlay"></div>
+
+    <!-- NAVBAR (Konsisten dengan halaman utama) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <!-- <span class="logo-icon">💠</span> -->
+                <a href="#" class="logo">
+                    <img src="../assets/MPS.png" alt="MPS" class="logo-img">
+                </a>
+                <span class="logo-text">Majelis Perwakilan Siswa.</span>
+            </a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Sidebar / Menu Mobile & Desktop -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="../1.html">Home</a></li>
+                    <!-- <li><a href="../index.html#tentang">Tentang Organisasi</a></li> -->
+                    <li class="dropdown">
+                        <button class="dropdown-btn">Semua Departemen ▾</button>
+                        <ul class="dropdown-content">
+                            <!-- Indikator aktif pada departemen yang sedang dibuka -->
+                            <li><a href="bph.html">BPH</a></li>
+                            <li><a href="pengawas.html">Komisi Pengawas</a></li>
+                            <li><a href="litbang.html">Komisi Litbang</a></li>
+                            <li><a href="aspis.html">Komisi Aspis</a></li>
+                            <li><a href="pubdok.html" class="active">Komisi Pubdok</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="../index.html#struktur">Struktur Organisasi</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION DEPARTEMEN -->
+    <header class="dept-hero fade-in">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <span class="badge">Komisi Pubdok</span>
+                <h1 class="hero-title">Publikasi Dokumentasi</h1>
+                <!-- <p class="hero-tagline">Publikasi Dokumentasi</p> -->
+                <p class="hero-desc"> Komisi Publikasi dan Dokumentasi berperan menyampaikan informasi kepada publik melalui berbagai media kreatif, seperti desain grafis, poster, video, foto, serta dokumentasi setiap kegiatan agar dapat menjadi arsip dan media promosi organisasi</p>
+            </div>
+            <div class="hero-illustration">
+                <!-- Placeholder untuk ilustrasi -->
+                <div class="icon-large"><img src="../assets/pubdok/logo1.png"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TENTANG KOMISI -->
+        <section class="dept-about section-padding fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tentang Komisi</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🎯</div> -->
+                        <h3>Fokus Kerja</h3>
+                        <p>Publikasi informasi, pembuatan konten kreatif, dan dokumentasi kegiatan organisasi.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">⚙️</div> -->
+                        <h3>Tugas & Fungsi</h3>
+                        <p>Mengelola media publikasi MPS, membuat desain dan konten, mendokumentasikan kegiatan, serta mengarsipkan hasil kegiatan organisasi.</p>
+                    </div>
+                    <div class="about-card">
+                        <!-- <div class="about-icon">🚀</div> -->
+                        <h3>Peran</h3>
+                        <p>Membangun citra MPS, menyebarkan informasi kepada siswa, dan menjadi pusat dokumentasi serta media komunikasi organisasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM KERJA -->
+        <section class="dept-programs section-padding bg-light fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Program Kerja</h2>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="program-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">LANYARD</span>
+                        </div>
+                        <h3>Lanyard</h3>
+                        <!-- <p class="program-short-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, odio!</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong>Lanyard adalah salah satu program kerja yang dikhususkan untuk perencanaan identitas internal organisasi (tanda pengenal/identitas tiap anggota).
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                           <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pubdok/lanyard1.jpeg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pubdok/lanyard2.png" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">MOTM</span>
+                        </div>
+                        <h3>Mading Of the Month</h3>
+                        <!-- <p class="program-short-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, deleniti.</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> Motm (mading of the month) memuat hasil kinerja periode tersebut yang sudah terlaksana. Bisa juga menyangkut aspek berita-berita terkini.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                           <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pubdok/motm.jpeg" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <!-- <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/MPS.png" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div> -->
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">PPHBN</span>
+                        </div>
+                        <h3>Poster Pertingatan Hari Besar</h3>
+                        <!-- <p class="program-short-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, cumque?</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> Suatu program kerja berupa pembuatan poster setiap hari besar dan akan dipublikasikan melalui instagram MPS untuk memperingati hari besar nasional.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                           <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pubdok/poster1.png" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pubdok/poster2.png" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <span class="program-status status-active">CONAN</span>
+                        </div>
+                        <h3> Konten Bulanan</h3>
+                        <!-- <p class="program-short-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, temporibus!</p> -->
+                        
+                        <div class="program-detail">
+                            <strong>Tujuan:</strong> CONAN atau konten bulanan adalah program kerja pengembangan dari PPHBN berupa konten yang akan diupload setiap bulannya di instagram dan tiktok MPS.
+                            
+                            <!-- MINI GALLERY PROKER 1 -->
+                           <div class="program-gallery">
+                                <h4>Dokumentasi Kegiatan:</h4>
+
+                                <!-- Wadah Slider -->
+                                <div class="slider-container">
+                                    <!-- Tombol Geser Kiri -->
+                                    <button class="slider-btn prev-btn">❮</button>
+
+                                    <div class="slider-track">
+                                        <!-- SLIDE 1 (Tambahkan class 'active' agar muncul pertama) -->
+                                        <div class="gallery-slide active">
+                                            <div class="gallery-item" data-index="0" data-caption="Foto Kegiatan 1">
+                                                <img src="../assets/pubdok/conan.png" alt="Kegiatan 1">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- SLIDE 2 (Tanpa class 'active' agar awalnya sembunyi) -->
+                                        <!-- <div class="gallery-slide">
+                                            <div class="gallery-item" data-index="1" data-caption="Foto Kegiatan 2">
+                                                <img src="../assets/pubdok/poster2.png" alt="Kegiatan 2">
+                                                <div class="gallery-overlay"><span>🔍</span></div>
+                                            </div>
+                                        </div>
+                                         -->
+                                        <!--  Tambah slide 3, pola yang sama -->
+                                    </div>
+
+                                    <!-- Tombol Geser Kanan -->
+                                    <button class="slider-btn next-btn">❯</button>
+                                </div>
+                                </div>
+                        </div>
+                        <button class="btn-expand">Lihat Detail <span>+</span></button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- NAVIGASI BAWAH -->
+<!-- NAVIGASI BAWAH -->
+    <nav class="bottom-nav fade-in">
+        <div class="container flex-between">
+            <a href="../1.html" class="btn-nav btn-home">Kembali ke Beranda</a>
+        </div>
+    </nav>
+
+    <!-- LIGHTBOX MODAL (Tersembunyi secara default) -->
+    <div id="lightbox" class="lightbox-modal">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <button id="btn-back-top" aria-label="Kembali ke atas">↑</button>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/department.js"></script>
+</body>
+</html>

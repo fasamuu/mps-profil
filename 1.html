@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -104,4 +105,163 @@
     <!-- Menghubungkan file JavaScript -->
     <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPS Opreg</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ELEMEN ANIMASI MASUK (Letakkan paling atas setelah <body>) -->
+    <div id="page-in-overlay" class="page-in-overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/AU.png" alt="Logo AU" class="logo-img">    
+                <img src="assets/MPS.png" alt="Logo MPS" class="logo-img">    
+            </a>
+            
+            <!-- Tombol Hamburger (Hanya muncul di Mobile) -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menu Navigasi -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#beranda" class="nav-item">Beranda</a></li>
+                <li><a href="#departemen" class="nav-item">Komisi</a></li>
+                <li><a href="#kontak" class="nav-item">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION KUNING (Termasuk Visi & Misi di Dalamnya) -->
+    <header id="beranda" class="hero-section">
+        
+        <!-- Konten Utama Hero -->
+        <div class="hero-content">
+            <h1 class="hero-title">MPS</h1>
+            <p class="hero-subtitle">Majelis Perwakilan Siswa adalah organisasi berbasis legislatif sebagai kedaulatan tertinggi organisasi kesiswaan di SMAIT Al Uswah Surabaya. Bergerak di bidang pengawasan organisasi, penelitian  untuk pengembangan, dan memperjuangkan aspirasi.</p>
+            <!-- <a href="#departemen" class="btn btn-primary">Lihat Komisi</a> -->
+        </div>
+
+        <!-- VISI & MISI SECTION -->
+        <div class="visi-misi-container fade-in">
+            <div class="container vm-grid">
+                
+                <!-- Kotak Visi -->
+                <div class="vm-card">
+                    <!-- <div class="vm-icon">👁️</div> -->
+                    <h2>Visi</h2>
+                    <p>
+                       "Mewujudkan Majelis Perwakilan Siswa sebagai organisasi yang terpercaya, peduli, dan berkontribusi aktif dalam mendukung kemajuan bersama."
+                    </p>
+                </div>
+
+                <!-- Kotak Misi -->
+                <div class="vm-card">
+                    <!-- <div class="vm-icon">🎯</div> -->
+                    <h2>Misi</h2>
+                    <ul class="vm-list">
+                        <li>Meraih kepercayaan warga sekolah melalui pengawasan yang objektif, konsisten, dan laporan transparan yang dapat dipertanggungjawabkan.</li>
+                        <li>Menumbuhkan kepedulian dengan aktif menampung, mendengarkan, dan menindaklanjuti aspirasi warga sekolah secara nyata.</li>
+                        <li>Menguatkan kontribusi MPS dengan berperan aktif memberikan masukan yang membangun, evaluasi, dan pendampingan terhadap program kerja organisasi eksekutif</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-action">
+            <a href="#departemen" class="btn btn-primary">Lihat Komisi</a>
+        </div>
+
+    </header>
+
+    <!-- BAGIAN KONTEN BAWAH -->
+    <main>
+        <!-- KOMISI / CARD SECTION -->
+        <section id="departemen" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Komisi MPS</h2>
+                    <p>Pilih Komisi untuk mengetahui lebih detail mengenai komisi yang ada di MPS.</p>
+                </div>
+                
+                <!-- Grid Card Otomatis -->
+                <div class="department-grid">
+                    
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <img src="assets/bph/logo.png" alt="BPH" class="card-img">
+                        <div class="card-content">
+                            <h3>BPH</h3>
+                            <p>Menggerakkan, Mengoordinasikan, Mengawal MPS.</p>
+                            <a href="html/bph.html" class="btn btn-outline">Detail Info</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <img src="assets/pengawas/logo1.png" alt="Pengawas" class="card-img">
+                        <div class="card-content">
+                            <h3>Pengawas</h3>
+                            <p>Awasi, Dampingi, Hubungkan, demi organisasi yang lebih terarah.</p>
+                            <a href="html/pengawas.html" class="btn btn-outline">Detail Info</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <img src="assets//litbang/logo1.png" alt="Litbang" class="card-img">
+                        <div class="card-content">
+                            <h3>Litbang</h3>
+                            <p>Meneliti, Mengembangkan, Memajukan Organisasi.</p>
+                            <a href="html/litbang.html" class="btn btn-outline">Detail Info</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <img src="assets/aspis/logo1.png" alt="Aspis" class="card-img">
+                        <div class="card-content">
+                            <h3>Aspis</h3>
+                            <p>Menghimpun Aspirasi, Menjembatani Komunikasi.</p>
+                            <a href="html/aspis.html" class="btn btn-outline">Detail Info</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Card 5 -->
+                    <article class="card">
+                        <img src="assets//pubdok/logo1.png" alt="Pubdok" class="card-img">
+                        <div class="card-content">
+                            <h3>Pubdok</h3>
+                            <p>Menyampaikan Informasi, Mengabadikan Momen.</p>
+                            <a href="html/pubdok.html" class="btn btn-outline">Detail Info</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="footer">
+        <p>instagram : @mpssmaitaluswah</p>
+    </footer>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+>>>>>>> Stashed changes
 </html>

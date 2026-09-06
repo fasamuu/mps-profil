@@ -1,0 +1,315 @@
+/* css/style.css */
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #3b82f6;
+    --accent-color: #d4af37;
+    --bccent-color : #f9801e ;
+    --text-color: #334155;
+    --text-light: #64748b;
+    --bg-color: #ffffff;
+    --bg-light: #f8fafc;
+    --border-color: #e2e8f0;
+    --nav-height: 70px;
+    --transition: all 0.3s ease;
+    --radius: 8px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* !!! ANIMASI MASUK !!! */
+.bg-light { background-color: var(--bg-light); }
+.section-padding { padding: clamp(3rem, 6vh, 6rem) 0; }
+
+
+.page-in-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background-color: var(--accent-color);
+    z-index: 9999;
+    pointer-events: none; 
+    
+    /* Panggil animasi baru yang bergerak ke bawah */
+    animation: slideDownTirai 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Kunci gerakan tirai TURUN KE BAWAH */
+@keyframes slideDownTirai {
+    0% {
+        transform: translateY(0); /* Posisi awal menutupi layar */
+    }
+    100% {
+        transform: translateY(100%); /* Nilai positif (100%) membuat tirai turun ke bawah layar */
+    }
+}
+
+
+/* === TYPOGRAPHY & HEADER UTAMA === */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--primary-color);
+}
+
+.divider {
+    height: 4px;
+    width: 60px;
+    background: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* === NAVBAR === */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--accent-color);
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+/* Pengaturan khusus untuk gambar logo */
+.logo-img {
+
+    height: 60px;      
+    width: auto;       /* Lebar menyesuaikan otomatis agar tidak gepeng */
+    display: block;
+}
+
+/* Pastikan di dalam navbar, logo tetap di kiri */
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: left;
+    /* padding: 0.1rem;          */
+    margin-left: -50px; /* Geser logo ke kiri sebanyak 10px */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a, .dropdown-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .dropdown-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Dropdown Navbar */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-color);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    list-style: none;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Tampil saat hover di desktop */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-content a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* === GLOBAL BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+
+#btn-back-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 99;
+}
+#btn-back-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* === ANIMATION UTILS === */
+.fade-in {
+    /* opacity: 0; */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === RESPONSIVE NAVBAR UTAMA === */
+@media (max-width: 767px) {
+    .hamburger { display: block; }
+    
+    .nav-menu {
+        position: absolute;
+        top: var(--nav-height);
+        left: -100%;
+        width: 100%;
+        background: var(--bg-color);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transition: var(--transition);
+    }
+    
+    .nav-menu.active { left: 0; }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .nav-links > li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-links a, .dropdown-btn {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none; /* Matikan hover di mobile, pakai klik JS */
+    }
+    
+    .dropdown.active .dropdown-content {
+        display: block;
+        position: static;
+        box-shadow: none;
+        background: var(--bg-light);
+    }
+    
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
